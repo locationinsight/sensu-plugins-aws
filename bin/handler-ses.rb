@@ -41,11 +41,7 @@ class SESNotifier < Sensu::Handler
 
   def build_mail_to_list
     json_config = config[:json_config] || 'ses'
-    if settings[json_config]['mail_per_check']
-      mail_to = @event['check']['mail_to'] || settings[json_config]['mail_to']
-    else
-      mail_to = @event['client']['mail_to'] || settings[json_config]['mail_to']
-    end
+    mail_to = @event['client']['mail_to'] || @event['check']['mail_to'] || settings[json_config]['mail_to']
     if settings[json_config].key?('subscriptions')
       @event['check']['subscribers'].each do |sub|
         if settings[json_config]['subscriptions'].key?(sub)

@@ -5,7 +5,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 ### Added
-- handler-ses.rb: Add ability to configure mail_to destination per check (@aayore)
+- handler-ses.rb: mail_to was client->json, now client->check->json (@aayore)
 
 ## [3.2.1] - 2016-08-10
 ### Fixed
