@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+### Added
+- handler-ses.rb: Add ability to configure mail_to destination per check (@aayore)
 
 ## [3.2.1] - 2016-08-10
 ### Fixed
